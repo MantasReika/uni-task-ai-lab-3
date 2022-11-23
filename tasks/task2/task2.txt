@@ -1,0 +1,15 @@
+    2) Test the accuracy of trained system. You need to find 10-15 photos with the same objects you trained to recognize (but photos needs to be not used during training) and run the script test.py
+
+
+To do this you need to take the photo , rename it to image.jpg , copy the photo to the same catalogue as the file test.py is. 
+You also need to copy to the same catalogue two more files from the training results. Within your dataset catalogue you will find catalogue json. 
+Copy the file model_class.json to the same catalogue where test.py is. From the catalogue models select the file with highest accuracy (acc and numbers in the name shows the accuracy) or play with several model files. 
+Copy this file to the same catalogue as test.py and rename model file to model.h5.
+
+You may need to change the parameter in the test.py file:
+
+prediction.loadModel(num_objects=3)  
+
+The parameter num_objects needs to be equal to the number of different objects you trained the program to recognize
+
+Run the test.py. The file line will contain the answer

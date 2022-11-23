@@ -1,0 +1,37 @@
+    1. Collect big set of photos of different objects, e.g. 50 images of roses, 50 images of daffodils, 50 images of carnations, etc.
+
+Create a catalogue dataset in the same catalog as your Python source files will be places.. 
+Create a catalog train inside the catalog dataset and place the photos with the different objects inside the catalogue train. 
+Images with different object needs to be stored in a separate catalogue, e.g. photos with roses needs to be stored in the catalogue roses, daffodils in the catalogue daffodils, carnations in the catalogue carnations
+
+dataset/train//roses// images of roses
+dataset/train//dafodills// images of dafodills
+dataset/train//carnations// images of carnations
+
+Create the catalogue test within the catalogue dataset. About 10-20% percent of the photos of the same objects put into the appropriate catalogues within test. E. g. 
+
+dataset/test//roses// images of roses
+dataset/test//dafodills// images of dafodills
+dataset/test//carnations// images of carnations
+
+The file images.rar shows the structure of the catalogues
+
+    2. You need to have installed next tools (if you already installed you can skip):
+
+i. TensorFlow
+pip install tensorflow==2.4.0
+ii. Others
+pip install keras==2.4.3 numpy==1.19.3 pillow==7.0.0 scipy==1.4.1 h5py==2.10.0 matplotlib==3.3.2 opencv-python keras-resnet==0.2.0
+v. ImageAI
+pip3 install imageai --upgrade
+
+
+    3. Run Python file ImageTrain.py. But before you need to make necessary adjustments to the last line of the file ImageTrain.py:
+
+model_trainer.trainModel(num_objects=3, num_experiments=200, enhance_data=True, batch_size=25, show_network_summary=True)
+
+The parameter num_objects needs to be equal to the number of different objects you want to train your system be able to recognize (in fact it needs to be equal to the number of catalogues inside test and train catalogues
+
+The parameter num_experiments needs to be equal to the number of iterations you want to use during training. I do not recommend to use less than 100 iterations. The more the better but the bigger number requires more time to train.
+
+The parameter batch_size needs to be less than the number of images for each type of objects. I suggest using half the number of images of each type of object.

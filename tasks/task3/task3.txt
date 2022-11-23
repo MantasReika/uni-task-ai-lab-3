@@ -1,0 +1,13 @@
+The task: explore how the training accuracy of neural network depends on:
+    A) Number of features used to describe the pattern
+    B) Number of classes
+    C) Number of training samples
+
+Necessary: to select the task you want the neural network will solve and to collect/ to generate training samples
+Training mode: supervised training
+
+Advised tool: Weka
+
+Expected outcome: dependencies of error on the number of classes; number of features  and number training samples
+
+Requirements for data: at least 20-30 examples for each class used; number of features needs to be between 5 and 10
